@@ -1,0 +1,50 @@
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show':mostrarModal}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="d-flex modal-header">
+          <h5 class="modal-title">{{titulo}}</h5>
+          <button type="button" id="cerrar" (click)="mostrarModal = false" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-12 form-group">
+                <label >Nombre</label>
+                <input ngModel name="nombre"   #nombre="ngModel"  type="text" class="form-control"  placeholder="{{viajeAEditar.nombre}}">
+              </div>
+              <div class="col-6">
+                <label>Ida</label>
+                <input ngModel name="ida"   #ida="ngModel" type="datetime-local" class="form-control">
+              </div>
+              <div class="col-6">
+                <label>Vuelta</label>
+                <input ngModel name="vuelta"   #vuelta="ngModel"  type="datetime-local" class="form-control">
+              </div>
+              <div class="col-12 form-group espacio">
+                <label>Destino</label>
+                <input  type="text"    ngModel name="destino" #destino="ngModel"  class="form-control" placeholder="{{viajeAEditar.destino}}">
+              </div>
+              <div class="col-12 form-group espacio">
+                <label>Descripcion</label>
+                <textarea type="text"  ngModel name="descripcion"   #descripcion="ngModel"  class="form-control" placeholder="{{viajeAEditar.descripcion}}"></textarea>
+              </div>
+            </div>
+            <p *ngIf="error" class="error">Por favor, completar todos los</p>
+          </form>
+          <input *ngIf="titulo == 'Agregar Viaje'" type="sumbit" (click)="getDatos(nombre, destino, ida, vuelta, descripcion)" class="btn btn-primary" id="agregarViaje" value="Agregar">
+          <input *ngIf="titulo == 'Editar Viaje'" type="sumbit" (click)="editarViaje(nombre, destino, ida, vuelta, descripcion)" class="btn btn-primary" id="agregarViaje" value="Editar">
+        </div>
+      </div>
+    </div>
+</div>
+
+<button *ngIf="titulo == 'Agregar Viaje'" (click)="mostrarModal=true" type="button"  data-toggle="modal" data-target="#exampleModal">
+  {{txtBoton}} <img src="{{url}}" alt="">
+</button>
+<button *ngIf="titulo == 'Editar Viaje'" (click)="mostrarModal=true" type="button"  data-toggle="modal" data-target="#exampleModal">
+  {{txtBoton}} <img src="{{url}}" alt="">
+</button>
+
+<button *ngIf="titulo == 'Agregar Plan'" class="btn btn-primary" id="agregar-plan" (click)="mostrarModal=true">{{txtBoton}}</button>

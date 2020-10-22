@@ -1,0 +1,32 @@
+.card{
+    padding: 3% 10%;
+    background-color: white;
+    border-radius: 0;
+    height: 350px;
+    width: 450px;
+}
+h4{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+.nombre, .resultado{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.nombre{
+    width: 45%;
+    font-weight: bold;
+}
+.resultado{
+    width: 60%; 
+    height: 65px;
+}
+p{
+    margin: 0 !important;
+    height: 50%;
+}
+.progress{
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+<table class="table" *ngIf="esViaje">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Destino</th>
+      <th scope="col">Ida</th>
+      <th scope="col">Vuelta</th>
+      <th scope="col">Descripción</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let viaje of viajes">
+      <td>{{viaje.nombre}}</td>
+      <td>{{viaje.destino}}</td>
+      <td>{{viaje.ida}}</td>
+      <td>{{viaje.vuelta}}</td>
+      <td>{{viaje.descripcion}}</td>
+      <td><button>Saber mas</button></td>
+      <td><app-modal [viajeAEditar]="viaje" (editViaje)="editarViaje($event)" [titulo]="'Editar Viaje'" [txtBoton]="'Editar viaje'"></app-modal></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table" *ngIf="esPlan">
+  <thead class="thead-light" class="centrado negrita">
+    <tr>
+      <th scope="col">Reserva de hotel</th>
+      <th scope="col">Dia</th>
+      <th scope="col">Hora inicio</th>
+      <th scope="col">Hora de finalizacion</th>
+      <th scope="col">Tipo</th>
+    </tr>
+  </thead>
+  <tbody class="centrado">
+    <tr *ngFor="let plan of planes">
+      <td>{{plan.reserva}}</td>
+      <td>{{plan.dia}}</td>
+      <td>{{plan.horaInicio}}</td>
+      <td>{{plan.horaFinalizacion}}</td>
+      <td>{{plan.tipo}}</td>
+    </tr>
+  </tbody>
+</table>

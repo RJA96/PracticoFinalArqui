@@ -1,0 +1,6 @@
+<agm-map [latitude]='latitude' [longitude]='longitude' [zoom]="9">
+    <agm-marker [latitude]='latitude' [longitude]='longitude'></agm-marker>
+    <!--cuando esten los planes, se recorre con ngFor todos los planes y los marca en el mapa, por ahora
+    se marca la ciudad de destino-->
+    <!--<agm-marker *ngFor="let marker of markers; let i=index" [latitude]="marker.lat[i]" [longitude]="marker.lng[i]"></agm-marker>-->
+</agm-map>

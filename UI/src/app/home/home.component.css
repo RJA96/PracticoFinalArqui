@@ -1,0 +1,39 @@
+button, select{
+    height: 100%;
+    width: 100%;
+    text-align: start;
+    padding: 0 0 0 10%;
+}
+img{
+    margin: 0 0 0 20%;
+}
+.boton{
+    margin: 0;
+}
+.tabla{
+    margin: 2% 0 0 0;
+}
+option{
+    border: 0;
+}
+table{
+    background-color: white;
+}
+
+.mostrar{
+    display: block;
+    position: absolute !important;
+
+}
+.oculto{
+    display: none;
+}
+.myModal{
+    position: absolute;
+    left: 25%;
+    top: 150px;
+    width: 90%;
+}
+.marco{
+    margin-top: 2.5%;
+}

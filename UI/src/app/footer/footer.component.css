@@ -1,0 +1,25 @@
+*{
+    padding:0;
+}
+.izquierda{
+    margin: 0 0 0 5%
+}
+footer{
+    background-color: white;
+    padding: 3% 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.margen-top-bajo{
+    margin-top: 3%;
+}
+
+.margen-top-medio{
+    margin-top: 10%;
+}

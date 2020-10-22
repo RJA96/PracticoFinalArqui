@@ -1,0 +1,14 @@
+<div class="row margen">
+    <div class="col-12 col-sm-4 info-viaje">
+        <app-info-viaje></app-info-viaje>
+    </div>
+    <div class="col-12 col-sm-8">
+        <app-vtable [esPlan]="true" [planes]="planes"></app-vtable>
+        <div class="ancho centrar">
+            <app-modal [titulo]="'Agregar Plan'" [txtBoton]="'Agregar Plan'"></app-modal>
+        </div>	
+        <div>
+            <app-map-medium [pais]="paisDestino" [ciudad]="ciudadDestino" [planes]="planes"></app-map-medium>
+        </div>
+    </div>
+</div>

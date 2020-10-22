@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="col-12">
+    <h4>{{estadisticas.titulo}}</h4>
+
+  <div *ngFor="let est of estadisticas.resultados">
+    <div class="d-flex justify-content-center ">
+      <div class="nombre d-flex align-content-center">
+        <p class="">{{est.pais}}</p>
+      </div>
+      <div class="resultado">
+        <div *ngIf="estadisticas.titulo == 'Paises visitados'" class="progress">
+          <div class="progress-bar" role="progressbar"  [ngStyle]="{'width':est.porcentaje}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div *ngIf="estadisticas.titulo == 'Kilometros recorridos' || estadisticas.titulo =='Cantidad de dias' || estadisticas.titulo =='Generales'" class="d-flex justify-content-center">
+            <p>{{est.porcentaje}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

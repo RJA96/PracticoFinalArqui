@@ -1,0 +1,30 @@
+<div class="marco">
+    <div class="row justify-content-center">
+      <div class="col-10">
+           <div class="col-12 d-flex justify-content-center">
+                  <h5>Viajes pendientes</h5>
+           </div>
+           <div class="row d-flex justify-content-between boton">
+               <div class="col-3">
+                  <app-modal [titulo]="'Agregar Viaje'" [txtBoton]="'Agregar Viaje'"
+                             [url]="'../../assets/far.fa-times-circle.png'"
+                             (datosViaje)="agregarViaje($event)">
+                  </app-modal>
+               </div>
+               <div class="col-3 align-self-center ">
+                   <select class="form-control" name="meses" id="meses">
+                       <option value="a">Mayo</option>
+                       <option value="a">Junio</option>
+                       <option value="a">Julio</option>
+                   </select>
+               </div>
+           </div>
+   </div>
+   </div>
+    <div class="row justify-content-center tabla">
+        <div class="col-10">
+            <app-vtable (edicionViaje)="editar($event)"  [viajes]="viajes" [esViaje]="true"></app-vtable>
+        </div>
+    </div>
+</div>
+

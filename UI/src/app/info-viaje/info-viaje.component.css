@@ -1,0 +1,20 @@
+.fondo-blanco {
+    background-color: white;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.info-margen{
+    padding: 5% 7%;
+}
+
+.row .col-6 {
+    margin: 3% 0;
+}

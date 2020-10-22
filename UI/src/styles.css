@@ -1,0 +1,38 @@
+*{
+    font-family: "Roboto";
+}
+@import '~bootstrap/dist/css/bootstrap.min.css';
+html, body{
+    background-color: #eeeeee;
+}
+.modal.show{
+    display: block;
+}
+
+button{
+    background-color: #175CBA;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    box-shadow: -7px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+    box-shadow: -3px 3px 5px rgba(0,0 , 0, 0.7);
+    background-color: rgb(19, 76, 155) ;
+}
+button:active{
+    border: 0 !important; 
+}
+
+select, option{
+    background-color: #C4C4C4 !important;
+}
+select{
+    border-radius: 3px;
+    border: 0;
+}
+select:focus{
+    background-color: #c4c4c4;
+
+}

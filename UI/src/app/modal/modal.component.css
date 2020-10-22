@@ -1,0 +1,33 @@
+#cerrar{
+    box-shadow: none;
+}
+.espacio{
+    margin-top: 4%;
+}
+h5{
+    margin: 0 0 0 32%;
+    text-transform: bold;
+}
+.modal-body{
+    padding: 0 10%;
+    margin-top: 3%;
+}
+#agregarViaje{
+    width: 100%;
+    margin: 0 0 5% 0;
+}
+div.modal-content{
+    background-color: #cccccc;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.error{
+    font-style: italic;
+    color: red;
+}
+
+#agregar-plan {
+    padding: 14px 130px;
+    margin: 4% 0;
+}
