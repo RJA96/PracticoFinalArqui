@@ -25,29 +25,6 @@ public class modelTest extends ModelConstansTest {
     Assertions.assertEquals(aeropuerto, aeropuerto1);
   }
 
-  @Test
-  void testEstadisticasShuldSetAllAtributes() {
-    Estadisticas estadisticas =
-        Estadisticas.builder()
-            .cantidadDeKmsRecorridos(cantidadDeKmsRecorridos)
-            .cantidadDeViajes(cantidadDeViajes)
-            .cantidadHorasDeVuelo(cantidadHorasDeVuelo)
-            .ciudadesVisitadas(ciudadesVisitadas)
-            .huellaDeCarbono(huellaDeCarbono)
-            .build();
-    Estadisticas estadisticas1 =
-        new Estadisticas(
-            cantidadDeViajes,
-            cantidadDeKmsRecorridos,
-            ciudadesVisitadas,
-            paisesVisitados,
-            cantidadHorasDeVuelo,
-            huellaDeCarbono);
-    estadisticas.setPaisesVisitados(paisesVisitados);
-    Assertions.assertEquals(estadisticas, estadisticas1);
-    Assertions.assertEquals(cantidadDeKmsRecorridos, estadisticas.getCantidadDeKmsRecorridos());
-    Assertions.assertEquals(paisesVisitados, estadisticas.getPaisesVisitados());
-  }
 
   @Test
   void usuarioShuldSetAllAtributes() {
