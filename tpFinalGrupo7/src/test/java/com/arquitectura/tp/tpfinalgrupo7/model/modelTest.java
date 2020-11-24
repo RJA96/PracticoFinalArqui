@@ -1,5 +1,6 @@
 package com.arquitectura.tp.tpfinalgrupo7.model;
 
+import java.util.HashSet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -36,8 +37,9 @@ public class modelTest extends ModelConstansTest {
             .contrasenia(contrasenia)
             .email(email)
             .viajes(viajes)
+            .roles(new HashSet<>())
             .build();
-    Usuario usuario1 = new Usuario(idInt, nombre, apellido, contrasenia, email, viajes);
+    Usuario usuario1 = new Usuario(idInt, nombre, apellido, contrasenia, email, viajes,new HashSet<>());
     Usuario usuario2 = new Usuario();
     usuario2.setIdUsuario(idInt);
     Assertions.assertEquals(usuario2, Usuario.fromId(idInt));
